@@ -24,12 +24,18 @@
     <ClCompile Include="display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="validation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glass.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="display.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="validation.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

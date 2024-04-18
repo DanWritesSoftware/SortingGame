@@ -27,6 +27,9 @@
     <ClCompile Include="validation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="access.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glass.h">
@@ -38,5 +41,13 @@
     <ClInclude Include="validation.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="access.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data.csv">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

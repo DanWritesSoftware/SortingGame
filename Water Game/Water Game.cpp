@@ -4,9 +4,11 @@
 #include "glass.h"
 #include "display.h"
 #include "validation.h"
+#include "access.h"
 
 int main()
 {
+    /*
     Glass g1({ 4,4,3,2,2 });
     Glass g2({ 0,0,4,5,5 });
     Glass g3({ 0,0,0,5,5 });
@@ -18,8 +20,11 @@ int main()
         {3,g3},
         {4,g4},
     };
-    
-    Display d(g1, g2, g3, g4);
+    */
+
+    Access a;
+    std::map<int, Glass> gameState = a.readLevel();
+    Display d(gameState);
     Validation v;
  
     std::string from, to;
@@ -32,10 +37,10 @@ int main()
         std::cout << "Pour to which bottle?: ";
         std::cin >> to;
         if (v.validateSingleIntInput(from) && v.validateSingleIntInput(to)) {
-            inputMap[stoi(to)].add(inputMap[stoi(from)]);
-            d.updateData(inputMap[1], inputMap[2], inputMap[3], inputMap[4]);
+            gameState[stoi(to)].add(gameState[stoi(from)]);
+            d.updateData(gameState);
             moves++;
-            if (inputMap[1].isComplete() && inputMap[2].isComplete() && inputMap[3].isComplete() && inputMap[4].isComplete()) {
+            if (gameState[1].isComplete() && gameState[2].isComplete() && gameState[3].isComplete() && gameState[4].isComplete()) { // TODO: Update to dynamic num of objects
                 std::cout << "\n\n All Bottles Completed, You Won in " << moves << " moves! \n\n";
                 break;
             }

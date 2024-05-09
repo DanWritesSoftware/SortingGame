@@ -13,4 +13,9 @@ During each move, the player will pour the top layer or 'color' into another bot
 The level is complete when each number or 'color' is separated into its own bottle.
 
 ### Known Bugs
-* (none!)
+* After the first level is completed, the ifstream throws EOF bit and FAIL bit.
+* The 'all bottles completed' message only displays after the first level is completed
+* after the bottles are completed, the user is asked to make an additional move before the next level is loaded.
+* High scores not yet fully implemented
+* Level numbers not yet fully implemented
+* End-of-game message not yet implemented

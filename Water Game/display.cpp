@@ -47,7 +47,12 @@ void Display::updateOut() {
 		}
 		std::cout << '\n';
 	}
-	std::cout << " *    *    *    * \n";
+	std::cout << " *";
+	for (int i = 0; i < size - 1; i++) {
+		std::cout << "    *";
+	}
+	std::cout << '\n';
+	//std::cout << " *    *    *    * \n";
 }
 
 void Display::updateData(Glass ip1, Glass ip2, Glass ip3, Glass ip4) {

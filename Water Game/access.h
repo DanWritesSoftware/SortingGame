@@ -16,10 +16,12 @@ public:
 	} 
 	std::map<int,Glass> readLevel();
 	void writeHighScore(int score);
+	bool goToLine(std::ifstream& file, int num);
 
 private:
 	std::ofstream dataOut;
 	std::ifstream dataIn;
+	int currentLine = 1;
 };
 
 
